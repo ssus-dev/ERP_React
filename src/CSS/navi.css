@@ -1,0 +1,194 @@
+@charset "UTF-8";
+.fix_layout {
+  width: 200px;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: #fff;
+  box-shadow: 1px 0px 10px rgba(200, 200, 200, 0.4);
+  box-sizing: border-box;
+}
+.fix_layout .logo {
+  width: 200px;
+  height: 65px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #5a95dd;
+}
+.fix_layout .today_zone {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 15px 0px;
+  padding: 0px 10px;
+}
+.fix_layout .today_zone p.name {
+  width: 100%;
+  height: 20px;
+  font-size: 15px;
+  text-align: right;
+  margin-bottom: 13px;
+}
+.fix_layout .today_zone p.name span {
+  width: 60px;
+  height: 20px;
+  border: 1px solid #5a95dd;
+  color: #5a95dd;
+  font-size: 12px;
+  float: left;
+  text-align: center;
+  border-radius: 100px;
+  line-height: 20px;
+}
+.fix_layout .today_zone p.name::after {
+  content: "님";
+}
+.fix_layout .today_zone .list {
+  width: 100%;
+  height: 20px;
+  margin-bottom: 8px;
+  line-height: 20px;
+}
+.fix_layout .today_zone .list span {
+  float: left;
+  font-size: 14px;
+  color: #8c8c8c;
+}
+.fix_layout .today_zone .list span img {
+  width: 18px;
+  height: 18px;
+  border-radius: 3px;
+  border: 1px solid #eaeaea;
+  display: block;
+  float: left;
+  margin-right: 5px;
+}
+.fix_layout .today_zone .list p {
+  float: right;
+  text-align: right;
+  color: #333333;
+  font-size: 13px;
+  font-weight: 500;
+}
+.fix_layout .today_zone .list p::after {
+  content: attr(data-val);
+}
+.fix_layout .menu {
+  width: 100%;
+  box-sizing: border-box;
+}
+.fix_layout .menu .first_depth {
+  width: 100%;
+  box-sizing: border-box;
+  float: left;
+  cursor: pointer;
+}
+.fix_layout .menu .first_depth .sub_menu {
+  width: 100%;
+  box-sizing: border-box;
+  display: none;
+}
+.fix_layout .menu .first_depth .sub_menu li a {
+  width: 100%;
+  font-size: 14px;
+  color: #333333;
+  padding: 0px 10px;
+  height: 5px;
+  line-height: 25px;
+}
+.fix_layout .menu .first_depth .sub_menu.active {
+  display: block;
+  transition: all 0.8s ease-in-out;
+  background: #fff;
+  -webkit-animation: slideInLeft 1s ease-out forwards;
+          animation: slideInLeft 1s ease-out forwards;
+}
+.fix_layout .menu .first_depth .sub_menu .example-enter {
+  display: none;
+  transform: translateY(-100%);
+  transition: top 1s transform ease-in;
+}
+.fix_layout .menu .first_depth .sub_menu .example-enter-active {
+  opacity: 1;
+  background: red;
+  transform: translateY(0);
+  transition: 1s transform ease-in;
+}
+.fix_layout .menu .first_depth .sub_menu .example-exit {
+  opacity: 1;
+  display: block;
+  background: red;
+  transform: translateY(0);
+  transition: 1s transform ease-in;
+}
+.fix_layout .menu .first_depth .sub_menu .example-exit-active {
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: 1s transform ease-in;
+}
+@-webkit-keyframes slideInLeft {
+  from {
+    transform: translate3d(0, -100%, 0, 0);
+    visibility: visible;
+  }
+  to {
+    transform: translate3d(0, 1%, 0, 0);
+  }
+}
+@keyframes slideInLeft {
+  from {
+    transform: translate3d(0, -100%, 0, 0);
+    visibility: visible;
+  }
+  to {
+    transform: translate3d(0, 1%, 0, 0);
+  }
+}
+@-webkit-keyframes ani {
+  0% {
+    transform: translateY(-100%);
+    transition: 2s transform ease-in;
+  }
+  100% {
+    transform: translateY(0);
+    transition: 2s transform ease-in;
+  }
+}
+@keyframes ani {
+  0% {
+    transform: translateY(-100%);
+    transition: 2s transform ease-in;
+  }
+  100% {
+    transform: translateY(0);
+    transition: 2s transform ease-in;
+  }
+}
+.fix_layout .menu .first_depth div {
+  width: 100%;
+  display: block;
+  height: 30px;
+  padding: 0px 10px;
+  box-sizing: border-box;
+}
+.fix_layout .menu .first_depth div .title {
+  font-size: 14px;
+  line-height: 30px;
+  color: #555;
+  float: left;
+}
+.fix_layout .menu .first_depth div .icon {
+  display: block;
+  float: left;
+  margin-right: 10px;
+  margin-top: 7px;
+}
+.fix_layout .menu .first_depth div .arrow {
+  display: block;
+  float: right;
+  width: 30px;
+  height: 30px;
+}
+.fix_layout .menu .first_depth.active {
+  background: #ecf2fe;
+  border-left: 2px solid #5a95dd;
+}/*# sourceMappingURL=navi.css.map */
