@@ -8,6 +8,7 @@ import Articles from "./Router/Articles";
 import Layout from "./Layout";
 import LayoutuseNavi from "./Layout_useNavi";
 import ArticlesnavLink from './Router/Articles_navLink';
+import Sty from "./Component/Sty";
 
 const menuList = [
     {
@@ -48,6 +49,7 @@ const App = () => {
 	return (
 		<div>
 			<Navigation menuList={menuList} />
+			<Sty/>
 			<div className="component-change">
 				{/* Routes 내에는 반드시  Route 컴포넌트만 존재해야한다 -- error 발생 */}
 				<Routes>
@@ -68,6 +70,7 @@ const App = () => {
 					</Route>
 				</Routes>
 			</div>
+
 		</div>
 	);	
 }
