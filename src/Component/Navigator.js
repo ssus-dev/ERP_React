@@ -8,16 +8,11 @@ const Navigator = ({menuList}) => {
     const [activeIndex, setActiveIndex] = useState(``);
     
     const innerList = menuList.map((item,index) => {
-        console.log("여기",item ,index)
-
         const showSubMenu = index === activeIndex ? "active" : "";
-        const ariaExpand = index === activeIndex ? "true" : "false";
-       
 
         return (
             <FirstMenu 
                 showSubMenu = {showSubMenu}
-                ariaExpand = {ariaExpand}
                 item = {item}
                 index = {index}
                 key={item.firstDepth}

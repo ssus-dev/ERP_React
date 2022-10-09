@@ -85,7 +85,9 @@
 .fix_layout .menu .first_depth .sub_menu {
   width: 100%;
   box-sizing: border-box;
-  display: none;
+  height: 0;
+  overflow: hidden;
+  transition: all 200ms ease-out;
 }
 .fix_layout .menu .first_depth .sub_menu li a {
   width: 100%;
@@ -97,71 +99,9 @@
 }
 .fix_layout .menu .first_depth .sub_menu.active {
   display: block;
-  transition: all 0.8s ease-in-out;
   background: #fff;
-  -webkit-animation: slideInLeft 1s ease-out forwards;
-          animation: slideInLeft 1s ease-out forwards;
-}
-.fix_layout .menu .first_depth .sub_menu .example-enter {
-  display: none;
-  transform: translateY(-100%);
-  transition: top 1s transform ease-in;
-}
-.fix_layout .menu .first_depth .sub_menu .example-enter-active {
-  opacity: 1;
-  background: red;
-  transform: translateY(0);
-  transition: 1s transform ease-in;
-}
-.fix_layout .menu .first_depth .sub_menu .example-exit {
-  opacity: 1;
-  display: block;
-  background: red;
-  transform: translateY(0);
-  transition: 1s transform ease-in;
-}
-.fix_layout .menu .first_depth .sub_menu .example-exit-active {
-  opacity: 0;
-  transform: translateY(-100%);
-  transition: 1s transform ease-in;
-}
-@-webkit-keyframes slideInLeft {
-  from {
-    transform: translate3d(0, -100%, 0, 0);
-    visibility: visible;
-  }
-  to {
-    transform: translate3d(0, 1%, 0, 0);
-  }
-}
-@keyframes slideInLeft {
-  from {
-    transform: translate3d(0, -100%, 0, 0);
-    visibility: visible;
-  }
-  to {
-    transform: translate3d(0, 1%, 0, 0);
-  }
-}
-@-webkit-keyframes ani {
-  0% {
-    transform: translateY(-100%);
-    transition: 2s transform ease-in;
-  }
-  100% {
-    transform: translateY(0);
-    transition: 2s transform ease-in;
-  }
-}
-@keyframes ani {
-  0% {
-    transform: translateY(-100%);
-    transition: 2s transform ease-in;
-  }
-  100% {
-    transform: translateY(0);
-    transition: 2s transform ease-in;
-  }
+  height: 2rem;
+  margin-bottom: 15px;
 }
 .fix_layout .menu .first_depth div {
   width: 100%;

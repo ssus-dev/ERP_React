@@ -1,22 +1,31 @@
 import React from "react";
+import SubMenu from "./SubMenu";
 
 const FirstMenu = ({
     showSubMenu,
-    ariaExpand,
     item,
     index,
     onClick,
 }) => {
+
+    const subList = item.secondDepth.map((subItem,subIndex) => {
+        return(
+            <SubMenu
+                key={subItem}
+                subItem = {subItem}
+                subIndex={subIndex}
+            />
+        );
+    });
     return (
-        <li className={`first_depth`} key={item.firstDepth} onClick={onClick} ariaexpand={ariaExpand}>
+        <li className={`first_depth ${showSubMenu}`} key={item.firstDepth} onClick={onClick}>
             <div>
-                <img src={process.env.PUBLIC_URL + './img/menu01.png'} alt="menu_icon" className="icon" />
+                <img src={process.env.PUBLIC_URL + item.firstIcon} alt="menu_icon" className="icon" />
                 <p className="title">{item.firstDepth}</p>
                 <img src={process.env.PUBLIC_URL + './img//menu_arrow_down.png'} alt="arrow" className="arrow" />
             </div>
             <ul className={`sub_menu ${showSubMenu}`}>
-                {/* <li><a href="basic_company.html">{item.secondDepth}</a></li> */}
-                <li><a href="basic_product.html">상품관리</a></li>
+                {subList}
             </ul>
         </li>
     );
